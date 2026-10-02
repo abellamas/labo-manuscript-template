@@ -43,7 +43,7 @@
     // en build/ para saber que recompilar. build/ esta ignorado por git.
     "latex-workshop.latex.autoClean.run": "never",
     // El comando "Clean up auxiliary files" usa latexmk, que respeta build/.
-    "latex-workshop.latex.clean.method": "cleanCommand",
+    "latex-workshop.latex.clean.method": "command",
     "latex-workshop.latex.clean.command": "latexmk",
     "latex-workshop.latex.clean.args": ["-c", "%TEX%"]
 }
