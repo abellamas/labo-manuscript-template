@@ -1,0 +1,29 @@
+{
+    // Compilar con la configuracion de .latexmkrc (pdflatex + biber, salida en build/).
+    // latexmk corre en esta carpeta, asi que toma el .latexmkrc solo.
+    // Sirve igual en VS Code y en Antigravity, con la extension LaTeX Workshop.
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk-latexmkrc",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "Manuscrito (pdflatex + biber)",
+            "tools": ["latexmk-latexmkrc"]
+        }
+    ],
+    // Donde buscar el PDF y el synctex: tiene que coincidir con $out_dir de .latexmkrc.
+    "latex-workshop.latex.outDir": "%DIR%/build",
+    "latex-workshop.latex.rootFile.doNotPrompt": true,
+    "latex-workshop.latex.rootFile.useSubFile": false,
+    // Compilar sólo cuando se pide, no en cada guardado.
+    "latex-workshop.latex.autoBuild.run": "never"
+}

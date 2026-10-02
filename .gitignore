@@ -1,5 +1,5 @@
 # Salidas de compilación
-plan.pdf
+main.pdf
 *.aux
 *.log
 *.out
